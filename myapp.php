@@ -54,6 +54,9 @@ $name = $row['full_name'];
 		<nav id="menu" role="navigation">
 			<ul>
 				<li><a href="#"><i class="icon-user"></i>Welcome, <?php echo $name; ?></a></li>
+				<?php if($_SESSION['user_id'] == '659'){
+				echo '<li class="js-iframe"><a href="users.php"><i class="icon-cogs"></i>Users</a></li>';
+				} ?>
 				<li class="js-iframe"><a href="settings.php"><i class="icon-cogs"></i>Settings</a></li>
 				
 				<li><a href="logout.php"><i class="icon-remove-sign"></i>Logout</a></li>
@@ -172,6 +175,17 @@ $name = $row['full_name'];
 				        <input type="submit" />
 				    </form>
 				  </div> <!-- #app end -->
+				  
+				  <div class="friend-icon"></div>
+                                <div id="friend">
+                                    <ul>
+                                    <?php $query = mysql_query("SELECT full_name, id FROM users ORDER BY full_name ASC "); // Selects friends
+				        while($row = mysql_fetch_array($query)){ ?>
+				        
+			            <li data-todoid="<?php echo $row['id']; ?>" data-category="<?php echo $row['full_name']; ?>" class="ui-state-default"><div class="container"><div class="print-box"></div><span class="todoname todo-title"><?php echo $row['full_name']; ?></span><span class="to-find"><?php echo $row['full_name'];?></span><span class="todo-archived"></span><span class="delete-archived"></span></div></li>
+				    <?php } ?>
+                                    </ul>
+                                </div> <!-- #archived end -->
 	  		
 	  		
 		  		<div class="archive-icon"></div>
@@ -184,7 +198,7 @@ $name = $row['full_name'];
 			      
 				    <?php } ?>
                                     </ul>
-                                </div> <!-- #archived end -->
+                                </div><!-- #archived end -->
 		  </div> <!-- .todo-bg end -->
 	  	
 	  	

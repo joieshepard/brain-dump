@@ -112,10 +112,10 @@ if ( isset($_POST['makecategory']) ) {
 	$dataTest = $data['total'];
 	$total = $data['total']+1;
 
-    mysql_query("INSERT INTO categories (id_user, category, sortid) VALUES ('$_SESSION[user_id]','New Category','$total')");
+    mysql_query("INSERT INTO categories (id_user, category, sortid) VALUES ('$_SESSION[user_id]','New Dump','$total')");
     $id = mysql_insert_id();
 
-    echo json_encode(array('category' => "New Category",'id' =>$id,'total' =>$dataTest));
+    echo json_encode(array('category' => "New Dump",'id' =>$id,'total' =>$dataTest));
 
 }
 

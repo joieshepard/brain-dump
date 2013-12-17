@@ -1,3 +1,5 @@
+/*Testing*/
+
 html {
 	overflow-x: hidden;
 }
@@ -995,6 +997,106 @@ $app UI
 	#app input[type="submit"] {
 		visibility: hidden;
 	}
+	
+/*
+
+
+Friend list CSS
+
+
+*/
+    .friend-icon {
+	width: 95%;
+	height: 14px;
+	background: url("../_img/archive_icon.png") center right no-repeat;
+	opacity: 0.7;
+	cursor: pointer;
+	float: left;
+	margin: 0 5% 20px 0;
+ }
+	.friend-icon:hover {
+		opacity: 1;
+	}
+
+#friend {
+	width:90%;
+	height:auto;
+	margin: 0 auto 20px auto;
+	display: none;
+}
+
+#friend ul {
+	float: left;
+	margin: 0 0 30px 0;
+}
+
+#friend li {
+        width: 100%;
+	margin: 10px 0 0 0;
+	height: auto;
+        position:relative;
+        float: left;
+	list-style-type: none;
+}
+#friend .todo-title {
+	font-size: 14px;
+	color: #656268;
+	width: 80%;
+        margin:12px 0 0 16px;
+	float: left;
+}
+
+#friend.todo-archived {
+	width: 14px;
+	height: 15px;
+	float: right;
+	margin: 10px 15px 0 0;
+	background: url("../_img/checked.png");
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)"; /* IE 8 opacity */
+	cursor: pointer;
+	color: #686868;
+}
+
+#friend.delete-friend {
+	width: 12px;
+	height: 14px;
+	float: right;
+	margin: 10px 15px 0 0;
+	background: url("../_img/delete_todo.png");
+	cursor: pointer;
+	opacity: 0.6;
+}
+	#friend.delete-friend:hover {
+		opacity: 1;
+	}
+
+#friend input[type="submit"] {
+	visibility: hidden;
+}
+
+#friend .container {
+	float: left;
+	width: 100%;
+	height: 34px;
+	text-shadow: 0px 1px 0px #fff;  
+	outline: none;  
+	background: -moz-linear-gradient(top,  rgba(232,232,232,0) 0%, rgba(237,234,238,0.65) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232,232,232,0)), color-stop(100%,rgba(237,234,238,0.65))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(232,232,232,0) 0%,rgba(237,234,238,0.65) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(232,232,232,0) 0%,rgba(237,234,238,0.65) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(232,232,232,0) 0%,rgba(237,234,238,0.65) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(232,232,232,0) 0%,rgba(237,234,238,0.65) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e8e8e8', endColorstr='#a6edeaee',GradientType=0 ); /* IE6-9 */
+	-webkit-border-radius: 3px;  
+	-moz-border-radius: 3px;  
+	border-radius: 3px;  
+	border: 1px solid #cdcacf;  
+	-webkit-box-shadow: 1px 1px 0px #fff;  
+	-moz-box-shadow: 1px 1px 0px #fff;  
+	box-shadow:  1px 1px 0px #fff;  
+	}
+        
+        
         
  /*
 #

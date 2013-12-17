@@ -343,7 +343,7 @@ $('#reg-form form').submit(function() {
                 $('#reg-form form').hide(); //hides form
                 $('.block-text').hide(); //hide Already have an account ? text
                 
-                $('#reg-form').append('<p class="wellcome">Thanks for signing up to Todo app! <a href="login.php">Please login to your account</a></p>'); // shows a confirmation msg
+                $('#reg-form').append('<p class="wellcome">Thanks for signing up with Brain Dump! <a href="login.php">Please login to your account</a></p>'); // shows a confirmation msg
 
                 }
 

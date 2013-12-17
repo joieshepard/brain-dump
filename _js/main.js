@@ -9,6 +9,7 @@ $(document).ready(function() {
 			category = "inbox";
 			//show the todos in inbox category
 			$('#app li[data-category="inbox"]').show();
+			$('#friend li[data-category="inbox"]').show();
 			$('#archived li[data-category="inbox"]').show();
 			$('.category-ul li[data-category="inbox"]').addClass('selected');
 			//select category
@@ -17,8 +18,13 @@ $(document).ready(function() {
 				$(this).addClass('selected');
 				category = $(this).attr('data-category');
 				$('#app li').hide();
+				
+				$('#friend li').hide();
+				$('#friend li[data-category="' + category + '"]').show();
+				
 				$('#archived li').hide();
 				$('#app li[data-category="' + category + '"]').show();
+				$('#friend li[data-category="' + category + '"]').show();
 				$('#archived li[data-category="' + category + '"]').show();
 				$(".category-title-center span").html(category);
 				$(".category-name span").html(category);
@@ -162,6 +168,11 @@ $(document).ready(function() {
 			//show archived tasks
 			$(".archive-icon").on("click", function() {
 				$("#archived").slideToggle(50);
+			});
+			//Show friends that belong to that dump
+			$(".friend-icon").on("click", function() {
+				$("#friend").slideToggle(100);
+				//alert('Clicked the friend icon');
 			});
 			//make a new category
 			$("#add-category").on("click", function(e) {
